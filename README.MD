@@ -25,8 +25,17 @@ Our python3 code requires the following packages:
 * opencv (for drawing the results)
 * numpy/scipy
 
-Our code has been tested on Linux, with pytorch 1.5 and torchvision 0.6.
-We do not provide support for installation.
+#### Installing dependencies
+
+**macOS** (CPU only):
+
+```
+conda create -n dope pytorch torchvision scipy numpy -c pytorch
+conda activate dope
+pip install -U pip
+pip install opencv-contrib-python
+```
+
 
 #### Download the models
 
