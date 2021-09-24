@@ -36,7 +36,7 @@ def dope(imagename, modelname, postprocessing='ppi'):
         raise Exception('{:s} does not exist, please download the model first and place it in the models/ folder'.format(ckpt_fname))
     print('Loading model', modelname)
     ckpt = torch.load(ckpt_fname, map_location=device)
-    #ckpt['half'] = False # uncomment this line in case your device cannot handle half computation
+    ckpt['half'] = False # uncomment this line in case your device cannot handle half computation
     ckpt['dope_kwargs']['rpn_post_nms_top_n_test'] = 1000
     model = dope_resnet50(**ckpt['dope_kwargs'])
     if ckpt['half']: model = model.half()
