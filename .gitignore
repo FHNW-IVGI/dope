@@ -1,6 +1,9 @@
 # models
 models/*.tgz
 
+# IDEs
+.vscode
+
 # reference repo
 lcrnet-v2-improved-ppi/*
 
